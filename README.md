@@ -1,6 +1,6 @@
 # 🎂 Sweet 19 | Interactive Birthday Experience 🎈
 
-[![Live Demo](https://special-birthday-webpage.vercel.app/)
+[![Live Demo](https://img.shields.io/badge/demo-live-brightgreen)](https://special-birthday-webpage.vercel.app/)
 [![Vercel](https://img.shields.io/badge/hosted-on-black)](https://special-birthday-webpage.vercel.app/)
 
 A high-energy, interactive web experience built to celebrate a 19th birthday. This project combines smooth CSS animations, interactive JavaScript mini-games, and a customized memory gallery designed specifically for both desktop and mobile viewing.
