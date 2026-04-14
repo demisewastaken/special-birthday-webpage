@@ -1,0 +1,108 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #fff0f5;
+    color: #333;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+section { min-height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 60px 20px; text-align: center; position: relative; z-index: 1; }
+
+/* Floating Hearts Animation */
+#hearts-container {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.heart {
+    position: absolute;
+    color: #ff69b4;
+    font-size: 20px;
+    animation: float 6s linear infinite;
+    opacity: 0;
+}
+
+@keyframes float {
+    0% { transform: translateY(100vh) rotate(0deg); opacity: 1; }
+    100% { transform: translateY(-10vh) rotate(360deg); opacity: 0; }
+}
+
+/* Gallery Styles */
+.gallery-container {
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.gallery-row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+}
+
+.standard-row .photo-card { height: 280px; }
+.vertical-row .photo-card { height: 500px; }
+
+.photo-card {
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+    position: relative; /* Essential for overlay positioning */
+}
+
+.photo-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* HOVER EFFECT FOR GALLERY */
+.photo-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(214, 51, 132, 0.7); /* Pink tint */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0; /* Hidden by default */
+    transition: opacity 0.4s ease;
+    padding: 15px;
+}
+
+.photo-overlay p {
+    color: white;
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+.photo-card:hover .photo-overlay {
+    opacity: 1; /* Show on hover */
+}
+
+.photo-card:hover { transform: scale(1.05); }
+
+/* Card Popup */
+.popup { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.85); display: flex; align-items: center; justify-content: center; z-index: 2000; }
+.card-content { background: white; padding: 40px; border-radius: 30px; text-align: center; width: 90%; max-width: 800px; position: relative; }
+.card-gif { width: 100%; max-width: 450px; border-radius: 15px; }
+
+/* Existing Styles */
+#typewriter { font-family: 'Dancing Script', cursive; font-size: 4rem; color: #d63384; }
+.btn { padding: 12px 25px; background: #d63384; color: white; border: none; border-radius: 25px; cursor: pointer; margin: 10px; font-weight: 600; }
+.hidden { display: none !important; }
+.reasons-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; width: 90%; }
+.reason-card { height: 300px; border-radius: 20px; position: relative; overflow: hidden; background-size: cover; display: flex; align-items: center; justify-content: center; color: white; }
+.reason-card::before { content: ''; position: absolute; top:0; left:0; width:100%; height:100%; background: rgba(0,0,0,0.4); transition: 0.3s; }
+.reason-card:hover::before { background: rgba(214, 51, 132, 0.7); }
+#cake-wrapper { display: flex; font-size: 10rem; transition: gap 0.8s ease; }
+.split-cake { gap: 40px; }

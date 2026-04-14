@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sweet 19 | Birthday Surprise</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+</head>
+<body>
+
+    <div id="hearts-container"></div>
+
+    <audio id="birthday-audio" loop>
+        <source src="birthday.mp3" type="audio/mpeg">
+    </audio>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1 id="typewriter"></h1>
+            <h2 class="age-badge">Level 19 Unlocked 🔓</h2>
+            <div id="age-counter">Calculating your 19 years...</div>
+            <div class="controls">
+                <button class="btn" id="play-music">🎵 Play Music</button>
+                <button class="btn" id="celebrate-btn">🎉 Party Blast</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="game-section">
+        <h2>Pop the 19 Balloons! 🎈</h2>
+        <p>Pop them all to unlock your birthday card!</p>
+        <div id="balloon-container"></div>
+    </section>
+
+    <section class="reasons-section">
+        <h2 class="section-title">19 Reasons Why You're Amazing</h2>
+        <div id="reasons-grid" class="reasons-grid"></div>
+    </section>
+
+    <section id="gallery" class="gallery">
+        <h2>19 Years of Memories</h2>
+        <div class="gallery-container">
+            <div class="gallery-row standard-row">
+                <div class="photo-card">
+                    <img src="https://picsum.photos/600/400?random=1" alt="1">
+                    <div class="photo-overlay"><p>That beautiful summer day ☀️</p></div>
+                </div>
+                <div class="photo-card">
+                    <img src="https://picsum.photos/600/400?random=2" alt="2">
+                    <div class="photo-overlay"><p>Our favorite coffee spot ☕</p></div>
+                </div>
+                <div class="photo-card">
+                    <img src="https://picsum.photos/600/400?random=3" alt="3">
+                    <div class="photo-overlay"><p>First day of college! 🎓</p></div>
+                </div>
+                <div class="photo-card">
+                    <img src="https://picsum.photos/600/400?random=4" alt="4">
+                    <div class="photo-overlay"><p>Late night adventures 🌙</p></div>
+                </div>
+            </div>
+            
+            <div class="gallery-row vertical-row">
+                <div class="photo-card">
+                    <img src="https://picsum.photos/400/600?random=5" alt="5">
+                    <div class="photo-overlay"><p>Best trip ever! ✈️</p></div>
+                </div>
+                <div class="photo-card">
+                    <img src="https://picsum.photos/400/600?random=6" alt="6">
+                    <div class="photo-overlay"><p>Smiling through it all ✨</p></div>
+                </div>
+                <div class="photo-card">
+                    <img src="https://picsum.photos/400/600?random=7" alt="7">
+                    <div class="photo-overlay"><p>Just us being silly 😜</p></div>
+                </div>
+                <div class="photo-card">
+                    <img src="https://picsum.photos/400/600?random=8" alt="8">
+                    <div class="photo-overlay"><p>The perfect birthday 🎂</p></div>
+                </div>
+            </div>
+
+            <div class="gallery-row standard-row">
+                <div class="photo-card">
+                    <img src="https://picsum.photos/600/400?random=9" alt="9">
+                    <div class="photo-overlay"><p>A walk in the park 🌳</p></div>
+                </div>
+                <div class="photo-card">
+                    <img src="https://picsum.photos/600/400?random=10" alt="10">
+                    <div class="photo-overlay"><p>Grateful for you ❤️</p></div>
+                </div>
+                <div class="photo-card">
+                    <img src="https://picsum.photos/600/400?random=11" alt="11">
+                    <div class="photo-overlay"><p>Winter wonderland ❄️</p></div>
+                </div>
+                <div class="photo-card">
+                    <img src="https://picsum.photos/600/400?random=12" alt="12">
+                    <div class="photo-overlay"><p>Cheers to 19! 🥂</p></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div id="card-popup" class="popup hidden">
+        <div class="card-content">
+            <span class="close-btn">&times;</span>
+            <div class="card-body">
+                <img src="photos/birthdaycake.png   " alt="Cute" class="card-gif">
+                <h2>Sweet 19! ❤️</h2>
+                <div class="card-message-text">
+                    <p>You've officially completed 19 laps around the sun! You're special, and I'm so glad I get to celebrate this one with you.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section class="cake-section">
+        <h2>The Final Moment...</h2>
+        <div class="cake-container">
+            <div id="cake-wrapper">
+                <div id="cake-left">🎂</div>
+                <div id="cake-right"></div>
+            </div>
+        </div>
+        <button class="btn" id="cut-cake-btn">Cut the 19th Birthday Cake 🔪</button>
+        <div id="cake-message" class="hidden">Happy 19th Birthday! 🍰✨</div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
